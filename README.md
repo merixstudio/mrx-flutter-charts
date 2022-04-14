@@ -1,17 +1,17 @@
 # Charts Flutter
 Simple and beautiful smooth animated charts.
-# Supported charts
-## Bar
+## Supported charts
+### Bar
 ![Screenshot1](/screenshots/chart_bar.gif) 
-## Group bar
+### Group bar
 ![Screenshot2](/screenshots/chart_group_bar.gif)
-## Candle
+### Candle
 ![Screenshot3](/screenshots/chart_candle.gif)
-## Line
+### Line
 ![Screenshot4](/screenshots/chart_line.gif)
-## Pie
+### Pie
 ![Screenshot5](/screenshots/chart_pie.gif)
-# Example
+## Example
 Check `/example` folder for more detailed usage
 ```dart
 Chart(
@@ -58,5 +58,5 @@ Chart(
   ],
 )
 ```
-# About
+## About
 Developed with passion, by Merixstudio developers. 
