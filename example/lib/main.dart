@@ -1,6 +1,8 @@
-import 'package:chart/chart.dart';
-import 'package:chart/models/chart_layer.dart';
-import 'package:example/mocks/chart_mocks.dart';
+import 'package:example/pages/bar_page.dart';
+import 'package:example/pages/candle_page.dart';
+import 'package:example/pages/group_bar_page.dart';
+import 'package:example/pages/line_page.dart';
+import 'package:example/pages/pie_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,70 +15,113 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Chart',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    final items = [
-      ChartMocks.exampleCandle(),
-      ChartMocks.exampleGroupPie(),
-      ChartMocks.exampleGroupBar(),
-      ChartMocks.exampleBar(),
-      ChartMocks.exampleLine(),
-    ];
     return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(
-            right: 20.0,
-          ),
-          child: GestureDetector(
-            onTap: () => setState(() {}),
-            child: const Icon(
-              Icons.refresh,
-              size: 26.0,
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const BarPage(),
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xFF1B0E41),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text('Bar'),
+              ),
             ),
-          ),
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
-      backgroundColor: const Color(0xFF1B0E41),
-      body: ListView.separated(
-        itemBuilder: (_, index) => Center(
-          child: _buildChart(items[index]),
-        ),
-        separatorBuilder: (_, __) => const SizedBox(
-          height: 24.0,
-        ),
-        itemCount: items.length,
-      ),
-    );
-  }
-
-  Widget _buildChart(List<ChartLayer> layers) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.7,
-      height: 400.0,
-      child: Chart(
-        layers: layers,
-        padding: const EdgeInsets.symmetric(horizontal: 48.0).copyWith(
-          bottom: 12.0,
+            const SizedBox(
+              height: 6.0,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const GroupBarPage(),
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xFF1B0E41),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text('Group bar'),
+              ),
+            ),
+            const SizedBox(
+              height: 6.0,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const CandlePage(),
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xFF1B0E41),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text('Candle'),
+              ),
+            ),
+            const SizedBox(
+              height: 6.0,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const LinePage(),
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xFF1B0E41),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text('Line'),
+              ),
+            ),
+            const SizedBox(
+              height: 6.0,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const PiePage(),
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: const Color(0xFF1B0E41),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: Text('Pie'),
+              ),
+            ),
+          ],
         ),
       ),
     );
