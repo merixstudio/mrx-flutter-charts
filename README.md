@@ -1,25 +1,18 @@
 # Charts Flutter
-Simple and beautiful smooth animation charts.
-
-# About
-The main goal was to create beautiful smooth own charts.
-
-We created all charts, animations using components provided by Flutter or even layers of canvas.
-
-By making the project public, we can also show you how we work at Merixstudio, library uses the standard developed by our developers.
-
-# Features
-- Smooth, beautiful animations,
-- Chart bar, pie, line and more...
-
-# Screenshots
+Simple and beautiful smooth animated charts.
+## Supported charts
+### Bar
 ![Screenshot1](/screenshots/chart_bar.gif) 
+### Group bar
 ![Screenshot2](/screenshots/chart_group_bar.gif)
+### Candle
 ![Screenshot3](/screenshots/chart_candle.gif)
+### Line
 ![Screenshot4](/screenshots/chart_line.gif)
+### Pie
 ![Screenshot5](/screenshots/chart_pie.gif)
-# Examples
-Simple example for chart bar:
+## Example
+Check `/example` folder for more detailed usage
 ```dart
 Chart(
   layers: [
@@ -65,5 +58,5 @@ Chart(
   ],
 )
 ```
-
-# License
+## About
+Developed with passion, by Merixstudio developers. 
