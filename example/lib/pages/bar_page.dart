@@ -1,10 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:mrx_charts/chart.dart';
-import 'package:mrx_charts/models/axis/chart_axis_layer.dart';
-import 'package:mrx_charts/models/bar/chart_bar_layer.dart';
-import 'package:mrx_charts/models/chart_layer.dart';
+import 'package:mrx_charts/mrx_charts.dart';
 
 class BarPage extends StatefulWidget {
   const BarPage({Key? key}) : super(key: key);

@@ -1,12 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:mrx_charts/chart.dart';
-import 'package:mrx_charts/models/axis/chart_axis_layer.dart';
-import 'package:mrx_charts/models/chart_layer.dart';
-import 'package:mrx_charts/models/group/bar/chart_group_bar_layer.dart';
-import 'package:mrx_charts/models/tooltip/chart_tooltip_layer.dart';
-import 'package:mrx_charts/models/tooltip/shape/chart_tooltip_shape.dart';
+import 'package:mrx_charts/mrx_charts.dart';
 
 class GroupBarPage extends StatefulWidget {
   const GroupBarPage({Key? key}) : super(key: key);
