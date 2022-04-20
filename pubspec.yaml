@@ -1,5 +1,5 @@
 name: mrx_charts
-description: Simple and beautiful smooth high-performance animated charts.
+description: Simple, high-performance Flutter charts with beautiful animations.
 version: 0.1.0
 repository: https://github.com/merixstudio/mrx-flutter-charts
 issue_tracker: https://github.com/merixstudio/mrx-flutter-charts/issues
