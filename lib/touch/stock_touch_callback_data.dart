@@ -1,4 +1,4 @@
-import 'package:chart/models/chart_data_item.dart';
+import 'package:mrx_charts/models/chart_data_item.dart';
 import 'package:flutter/material.dart';
 
 class ChartTouchCallbackData {

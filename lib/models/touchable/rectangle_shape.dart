@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:chart/models/touchable/touchable_shape.dart';
+import 'package:mrx_charts/models/touchable/touchable_shape.dart';
 
 class RectangleShape<T> extends TouchableShape<T> {
   final Offset rectOffset;

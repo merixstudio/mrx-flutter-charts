@@ -1,6 +1,6 @@
-import 'package:chart/models/animation/chart_animation.dart';
-import 'package:chart/models/chart_data_item.dart';
-import 'package:chart/models/chart_layer.dart';
+import 'package:mrx_charts/models/animation/chart_animation.dart';
+import 'package:mrx_charts/models/chart_data_item.dart';
+import 'package:mrx_charts/models/chart_layer.dart';
 import 'package:flutter/material.dart';
 
 part 'chart_line_data_item.dart';

@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:chart/models/touchable/touchable_shape.dart';
+import 'package:mrx_charts/models/touchable/touchable_shape.dart';
 
 class ArcShape<T> extends TouchableShape<T> {
   static const double twoPi = 2.0 * pi;

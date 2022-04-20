@@ -1,9 +1,9 @@
-import 'package:chart/models/chart_data_item.dart';
-import 'package:chart/models/chart_layer.dart';
-import 'package:chart/models/touchable/touchable_shape.dart';
-import 'package:chart/painter/chart_painter.dart';
-import 'package:chart/touch/chart_touch_detector.dart';
-import 'package:chart/touch/stock_touch_callback_data.dart';
+import 'package:mrx_charts/models/chart_data_item.dart';
+import 'package:mrx_charts/models/chart_layer.dart';
+import 'package:mrx_charts/models/touchable/touchable_shape.dart';
+import 'package:mrx_charts/painter/chart_painter.dart';
+import 'package:mrx_charts/touch/chart_touch_detector.dart';
+import 'package:mrx_charts/touch/stock_touch_callback_data.dart';
 import 'package:flutter/material.dart';
 
 class Chart extends StatefulWidget {

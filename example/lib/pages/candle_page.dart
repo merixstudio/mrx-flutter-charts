@@ -1,10 +1,10 @@
-import 'package:chart/chart.dart';
-import 'package:chart/models/axis/chart_axis_layer.dart';
-import 'package:chart/models/candle/chart_candle_layer.dart';
-import 'package:chart/models/chart_layer.dart';
-import 'package:chart/models/grid/chart_grid_layer.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:mrx_charts/chart.dart';
+import 'package:mrx_charts/models/axis/chart_axis_layer.dart';
+import 'package:mrx_charts/models/candle/chart_candle_layer.dart';
+import 'package:mrx_charts/models/chart_layer.dart';
+import 'package:mrx_charts/models/grid/chart_grid_layer.dart';
 
 class CandlePage extends StatefulWidget {
   const CandlePage({Key? key}) : super(key: key);

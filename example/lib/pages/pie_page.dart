@@ -1,11 +1,11 @@
 import 'dart:math';
 
-import 'package:chart/chart.dart';
-import 'package:chart/models/chart_layer.dart';
-import 'package:chart/models/group/pie/chart_group_pie_layer.dart';
-import 'package:chart/models/tooltip/chart_tooltip_layer.dart';
-import 'package:chart/models/tooltip/shape/chart_tooltip_shape.dart';
 import 'package:flutter/material.dart';
+import 'package:mrx_charts/chart.dart';
+import 'package:mrx_charts/models/chart_layer.dart';
+import 'package:mrx_charts/models/group/pie/chart_group_pie_layer.dart';
+import 'package:mrx_charts/models/tooltip/chart_tooltip_layer.dart';
+import 'package:mrx_charts/models/tooltip/shape/chart_tooltip_shape.dart';
 
 class PiePage extends StatefulWidget {
   const PiePage({Key? key}) : super(key: key);

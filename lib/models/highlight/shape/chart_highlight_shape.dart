@@ -1,6 +1,6 @@
-import 'package:chart/models/chart_data_item.dart';
-import 'package:chart/models/chart_painter_data.dart';
-import 'package:chart/touch/stock_touch_callback_data.dart';
+import 'package:mrx_charts/models/chart_data_item.dart';
+import 'package:mrx_charts/models/chart_painter_data.dart';
+import 'package:mrx_charts/touch/stock_touch_callback_data.dart';
 import 'package:flutter/material.dart';
 
 part 'chart_highlight_line_shape.dart';
