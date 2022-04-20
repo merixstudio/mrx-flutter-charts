@@ -19,7 +19,6 @@ import 'package:mrx_charts/models/touchable/arc_shape.dart';
 import 'package:mrx_charts/models/touchable/rectangle_shape.dart';
 import 'package:mrx_charts/models/touchable/touchable_shape.dart';
 import 'package:mrx_charts/touch/stock_touch_callback_data.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 
 part 'chart_axis_painter.dart';
@@ -296,6 +295,29 @@ extension _ListExtensions<T> on List<T> {
   T? get lastOrNull => isNotEmpty ? last : null;
 
   T? getOrNull(int index) => length > index ? this[index] : null;
+
+  T? firstWhereOrNull(bool Function(T element) test) {
+    for (var element in this) {
+      if (test(element)) return element;
+    }
+    return null;
+  }
+}
+
+extension _IterableExtensions<T> on Iterable<T> {
+  List<T> copy() => [...this];
+
+  List<T> sorted(Comparator<T> compare) => copy()..sort(compare);
+}
+
+extension _IterableDoubleExtensions on Iterable<double> {
+  double get sum {
+    double result = 0.0;
+    for (double value in this) {
+      result += value;
+    }
+    return result;
+  }
 }
 
 extension _ListTextPainterExtensions on List<TextPainter> {
