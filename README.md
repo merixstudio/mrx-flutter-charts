@@ -59,4 +59,4 @@ Chart(
 )
 ```
 ## About
-Developed with passion, by Merixstudio developers. 
+Developed with passion, by [Merixstudio](https://www.merixstudio.com/development/flutter/) developers. 
