@@ -2,15 +2,15 @@
 Simple and beautiful smooth animated charts.
 ## Supported charts
 ### Bar
-![Screenshot1](https://github.com/merixstudio/mrx-flutter-charts/blob/master//screenshots/chart_bar.gif) 
+![Screenshot1](https://raw.githubusercontent.com/merixstudio/mrx-flutter-charts/master/screenshots/chart_bar.gif) 
 ### Group bar
-![Screenshot2](https://github.com/merixstudio/mrx-flutter-charts/blob/master//screenshots/chart_group_bar.gif)
+![Screenshot2](https://raw.githubusercontent.com/merixstudio/mrx-flutter-charts/master/screenshots/chart_group_bar.gif)
 ### Candle
-![Screenshot3](https://github.com/merixstudio/mrx-flutter-charts/blob/master//screenshots/chart_candle.gif)
+![Screenshot3](https://raw.githubusercontent.com/merixstudio/mrx-flutter-charts/master/screenshots/chart_candle.gif)
 ### Line
-![Screenshot4](https://github.com/merixstudio/mrx-flutter-charts/blob/master//screenshots/chart_line.gif)
+![Screenshot4](https://raw.githubusercontent.com/merixstudio/mrx-flutter-charts/master/screenshots/chart_line.gif)
 ### Pie
-![Screenshot5](https://github.com/merixstudio/mrx-flutter-charts/blob/master//screenshots/chart_pie.gif)
+![Screenshot5](https://raw.githubusercontent.com/merixstudio/mrx-flutter-charts/master/screenshots/chart_pie.gif)
 ## Example
 Check `/example` folder for more detailed usage
 ```dart
