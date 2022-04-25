@@ -1,8 +1,10 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for line.
 class _ChartLinePainter {
   const _ChartLinePainter._();
 
+  /// Draw line.
   static void draw({
     required Canvas canvas,
     required AnimationController controller,

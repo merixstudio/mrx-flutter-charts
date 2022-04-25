@@ -6,8 +6,12 @@ import 'package:flutter/material.dart';
 part 'chart_bar_data_item.dart';
 part 'chart_bar_settings.dart';
 
+/// Provides paint for bar layer.
 class ChartBarLayer extends ChartLayer {
+  /// The items data of bar.
   final List<ChartBarDataItem> items;
+
+  /// The settings of bar.
   final ChartBarSettings settings;
 
   const ChartBarLayer({
@@ -15,6 +19,7 @@ class ChartBarLayer extends ChartLayer {
     required this.settings,
   });
 
+  /// Dispose all animations.
   @override
   void dispose() {
     for (final ChartBarDataItem item in items) {

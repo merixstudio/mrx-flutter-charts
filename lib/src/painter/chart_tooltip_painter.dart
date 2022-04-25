@@ -1,8 +1,10 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for tooltip.
 class _ChartTooltipPainter {
   const _ChartTooltipPainter._();
 
+  /// Draw tooltip shape.
   static void draw({
     required Canvas canvas,
     required ChartTooltipLayer layer,

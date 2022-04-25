@@ -1,12 +1,30 @@
 part of 'chart_tooltip_shape.dart';
 
+/// Provides tooltip pie shape.
 class ChartTooltipPieShape<T extends ChartDataItem> extends ChartTooltipShape {
+  /// The background color of shape.
   final Color backgroundColor;
+
+  /// The function return text name of shape.
   final String Function(T) onTextName;
+
+  /// The function return text value of shape.
   final String Function(T) onTextValue;
+
+  /// The TextStyle for name of shape.
   final TextStyle nameTextStyle;
+
+  /// The TextSty;e for value of shape.
   final TextStyle valueTextStyle;
+
+  /// The padding of shape.
+  ///
+  /// Default to EdgeInsets.zero
   final EdgeInsets padding;
+
+  /// The radius of shape.
+  ///
+  /// Default to 0.0
   final double radius;
 
   const ChartTooltipPieShape({
@@ -19,6 +37,7 @@ class ChartTooltipPieShape<T extends ChartDataItem> extends ChartTooltipShape {
     this.radius = 0.0,
   });
 
+  /// Draw tooltip pie shape.
   @override
   void draw(Canvas canvas, ChartPainterData painterData,
       ChartTouchCallbackData touchedData, double tolerance) {

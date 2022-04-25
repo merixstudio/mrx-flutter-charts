@@ -1,8 +1,10 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for candle.
 class _ChartCandlePainter {
   const _ChartCandlePainter._();
 
+  /// Draw candle.
   static void draw({
     required Canvas canvas,
     required AnimationController controller,

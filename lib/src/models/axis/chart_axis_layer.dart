@@ -7,9 +7,15 @@ part 'data/chart_axis_data_item.dart';
 part 'settings/chart_axis_settings.dart';
 part 'settings/chart_axis_settings_axis.dart';
 
+/// Provides paint for axis layer.
 class ChartAxisLayer extends ChartLayer {
+  /// The x of axis.
   final ChartAxisData x;
+
+  /// The y of axis.
   final ChartAxisData y;
+
+  /// The settings of axis.
   final ChartAxisSettings settings;
 
   ChartAxisLayer({
@@ -23,6 +29,7 @@ class ChartAxisLayer extends ChartLayer {
           label: labelY,
         );
 
+  /// Dispose all animations.
   @override
   void dispose() {
     x.dispose();

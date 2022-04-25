@@ -2,8 +2,12 @@ import 'dart:ui';
 
 import 'package:mrx_charts/src/models/touchable/touchable_shape.dart';
 
+/// Provides touchable rectangle shape.
 class RectangleShape<T> extends TouchableShape<T> {
+  /// The position of rectangle.
   final Offset rectOffset;
+
+  /// The size of rectangle.
   final Size rectSize;
 
   RectangleShape({
@@ -14,6 +18,7 @@ class RectangleShape<T> extends TouchableShape<T> {
           data: data,
         );
 
+  /// Check rectangle has been clicked.
   @override
   bool isHit(Offset offset) {
     return rectOffset.dx <= offset.dx &&

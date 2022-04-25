@@ -1,8 +1,10 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for grid.
 class _ChartGridPainter {
   const _ChartGridPainter._();
 
+  /// Draw grid.
   static void draw({
     required Canvas canvas,
     required AnimationController controller,

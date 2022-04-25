@@ -1,5 +1,9 @@
+/// Provides value of axis.
 class ChartAxisValue {
+  /// The max of axis's value.
   final double max;
+
+  /// The min of axis's value.
   final double min;
 
   const ChartAxisValue({

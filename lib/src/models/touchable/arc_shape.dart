@@ -3,13 +3,23 @@ import 'dart:ui';
 
 import 'package:mrx_charts/src/models/touchable/touchable_shape.dart';
 
+/// Provides touchable arc shape.
 class ArcShape<T> extends TouchableShape<T> {
   static const double twoPi = 2.0 * pi;
 
+  /// The center of arc.
   final Offset center;
+
+  /// The inner radius of arc.
   final double innerRadius;
+
+  /// The outer radius of arc.
   final double outerRadius;
+
+  /// The start angle of arc.
   final double startAngle;
+
+  /// The sweep angel of arc.
   final double sweepAngle;
 
   ArcShape({
@@ -24,6 +34,7 @@ class ArcShape<T> extends TouchableShape<T> {
           data: data,
         );
 
+  /// Check arc bas been clicked.
   @override
   bool isHit(Offset offset) {
     final double x = offset.dx - center.dx;

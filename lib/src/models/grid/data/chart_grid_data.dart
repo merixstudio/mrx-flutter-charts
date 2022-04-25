@@ -1,8 +1,14 @@
 part of '../chart_grid_layer.dart';
 
+/// Provises data of grid.
 class ChartGridData {
+  /// The items data of grid.
   final List<ChartGridDataItem> items;
+
+  /// The max value in data.
   final double max;
+
+  /// The min value in data.
   final double min;
 
   ChartGridData({
@@ -18,6 +24,7 @@ class ChartGridData {
                 .value
             : 0.0;
 
+  /// Dispose all animations.
   void dispose() {
     for (final ChartGridDataItem item in items) {
       item.dispose();

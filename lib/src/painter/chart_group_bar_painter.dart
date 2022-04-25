@@ -1,8 +1,10 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for group bar.
 class _ChartGroupBarPainter {
   const _ChartGroupBarPainter._();
 
+  /// Draw group bar.
   static void draw({
     required Canvas canvas,
     required AnimationController controller,
