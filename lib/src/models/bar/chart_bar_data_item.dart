@@ -1,6 +1,6 @@
 part of 'chart_bar_layer.dart';
 
-/// Provides data item of bar.
+/// A collection of values for a single bar in a chart.
 class ChartBarDataItem extends ChartDataItem {
   /// The color of data item.
   final Color color;
@@ -71,7 +71,7 @@ class ChartBarDataItem extends ChartDataItem {
   /// Defaults to Size.zero
   Size get lastValueSize => _value.lastSize;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {
     _touch.dispose();
@@ -149,7 +149,7 @@ class _ChartBarDataItemTouch {
   /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _pos.dispose();
     _size.dispose();
@@ -221,7 +221,7 @@ class _ChartBarDataItemValue {
   /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _color.dispose();
     _pos.dispose();

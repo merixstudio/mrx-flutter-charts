@@ -1,6 +1,6 @@
 part of '../chart_grid_layer.dart';
 
-/// Provides data item of grid.
+/// A collection of values for a grid in a chart.
 class ChartGridDataItem {
   /// The value of data item.
   final double value;
@@ -45,7 +45,7 @@ class ChartGridDataItem {
   /// Defaults to Offset.zero
   Offset get lastStartPos => _startPos.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _color.dispose();
     _endPos.dispose();

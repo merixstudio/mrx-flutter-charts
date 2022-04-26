@@ -1,6 +1,6 @@
 part of '../chart_axis_layer.dart';
 
-/// Provides data item of the axis.
+/// A collection of values for an axis in a chart.
 class ChartAxisDataItem {
   /// The label of data item.
   final String label;
@@ -37,7 +37,7 @@ class ChartAxisDataItem {
   /// Defaults to TextStyle(color: Colors.transparent)
   TextStyle get lastTextStyle => _textStyle.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _pos.dispose();
     _textStyle.dispose();

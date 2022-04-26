@@ -7,7 +7,7 @@ part 'data/chart_grid_data_item.dart';
 part 'settings/chart_grid_settings.dart';
 part 'settings/chart_grid_settings_axis.dart';
 
-/// Provides paint for grid layer.
+/// This layer allows to render grids.
 class ChartGridLayer extends ChartLayer {
   /// The x axis of grid.
   final ChartGridData x;
@@ -23,7 +23,7 @@ class ChartGridLayer extends ChartLayer {
   })  : x = settings.x.generate(),
         y = settings.y.generate();
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {
     x.dispose();

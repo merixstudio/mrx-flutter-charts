@@ -1,14 +1,14 @@
 part of '../chart_axis_layer.dart';
 
-/// Provides settings of the selected axis.
+/// A collection of values for settings of the selected axis.
 class ChartAxisSettingsAxis {
   /// The frequency of the value.
   final double frequency;
 
-  /// The max of the value in axis.
+  /// The max of the value in the axis.
   final double max;
 
-  /// The min of the value in axis.
+  /// The min of the value in the axis.
   final double min;
 
   /// The TextStyle in axis.

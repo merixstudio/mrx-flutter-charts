@@ -6,12 +6,12 @@ part 'chart_candle_data_item.dart';
 part 'chart_candle_data_item_value.dart';
 part 'chart_candle_settings.dart';
 
-/// Provides paint for candle layer.
+/// This layer allows to render candles.
 class ChartCandleLayer extends ChartLayer {
-  /// The items data of candle.
+  /// The items data of candles.
   final List<ChartCandleDataItem> items;
 
-  /// The settings of candle.
+  /// The settings of candles.
   final ChartCandleSettings settings;
 
   const ChartCandleLayer({
@@ -19,7 +19,7 @@ class ChartCandleLayer extends ChartLayer {
     required this.settings,
   });
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {
     for (final ChartCandleDataItem item in items) {

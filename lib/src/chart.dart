@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 /// Widget of charts.
 class Chart extends StatefulWidget {
-  /// The duration animation of charts.
+  /// The duration of the chart animations.
   ///
   /// Defaults to Duration(milliseconds: 300)
   final Duration duration;

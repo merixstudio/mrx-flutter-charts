@@ -1,6 +1,6 @@
 part of '../chart_grid_layer.dart';
 
-/// Provides settings of grid.
+/// A collection of values for settings in axises.
 class ChartGridSettings {
   /// The x axis of grid.
   final ChartGridSettingsAxis x;

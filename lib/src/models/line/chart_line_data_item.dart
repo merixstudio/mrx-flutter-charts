@@ -1,6 +1,6 @@
 part of 'chart_line_layer.dart';
 
-/// Provides data item of line.
+/// A collection of values for a line in a chart.
 class ChartLineDataItem extends ChartDataItem {
   /// The value of data item.
   final double value;
@@ -57,7 +57,7 @@ class ChartLineDataItem extends ChartDataItem {
   /// Defaults to Offset.zero
   Offset get lastValuePos => _value.lastPos;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {
     _value.dispose();
@@ -130,7 +130,7 @@ class _ChartLineDataItemTouch {
   /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _pos.dispose();
     _size.dispose();
@@ -188,7 +188,7 @@ class _ChartLineDataItemValue {
   /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _color.dispose();
     _pos.dispose();

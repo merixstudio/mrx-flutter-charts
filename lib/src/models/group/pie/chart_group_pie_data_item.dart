@@ -1,6 +1,6 @@
 part of 'chart_group_pie_layer.dart';
 
-/// Provides data item of pie.
+/// A collection of values for a group pies in a chart.
 class ChartGroupPieDataItem extends ChartDataItem {
   /// The amount of data item.
   final double amount;
@@ -49,7 +49,7 @@ class ChartGroupPieDataItem extends ChartDataItem {
   /// Defaults to 0.0
   double get lastValueSweep => _value.lastSweep;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {
     _value.dispose();
@@ -119,7 +119,7 @@ class _ChartGroupPieDataItemValue {
   /// Defaults to 0.0
   double get lastSweep => _sweep.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _color.dispose();
     _start.dispose();

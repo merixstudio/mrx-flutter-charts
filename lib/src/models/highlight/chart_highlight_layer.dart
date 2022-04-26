@@ -1,7 +1,7 @@
 import 'package:mrx_charts/src/models/chart_layer.dart';
 import 'package:mrx_charts/src/models/highlight/shape/chart_highlight_shape.dart';
 
-/// Provides paint for highlight layer.
+/// This layer allows to render highlight.
 class ChartHighlightLayer extends ChartLayer {
   /// The function return selected shape.
   final ChartHighlightShape Function() shape;
@@ -10,7 +10,7 @@ class ChartHighlightLayer extends ChartLayer {
     required this.shape,
   });
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {}
 }

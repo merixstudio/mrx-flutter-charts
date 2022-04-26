@@ -1,13 +1,13 @@
 part of 'chart_candle_layer.dart';
 
-/// Provides settings of candle.
+/// A collection of values for settings in candles.
 class ChartCandleSettings {
-  /// The radius of candle.
+  /// The radius of candles.
   ///
   /// Defaults to 4.0
   final double radius;
 
-  /// The thickness of candle.
+  /// The thickness of candles.
   ///
   /// Defaults to 8.0
   final double thickness;

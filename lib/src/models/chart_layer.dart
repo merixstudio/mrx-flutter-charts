@@ -2,6 +2,6 @@
 abstract class ChartLayer {
   const ChartLayer();
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose();
 }

@@ -1,6 +1,6 @@
 part of 'chart_group_bar_layer.dart';
 
-/// Provides data item of group bar.
+/// A collection of values for a group bar in a chart.
 class ChartGroupBarDataItem extends ChartDataItem {
   /// The color of data item.
   final Color color;

@@ -1,11 +1,11 @@
 part of '../chart_axis_layer.dart';
 
-/// Provides settings of axis.
+/// A collection of values for settings in axises.
 class ChartAxisSettings {
-  /// The x of axis.
+  /// The x of the axis.
   final ChartAxisSettingsAxis x;
 
-  /// The y of axis.
+  /// The y of the axis.
   final ChartAxisSettingsAxis y;
 
   const ChartAxisSettings({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Provides painter data.
+/// A collection values for painter data.
 class ChartPainterData {
   /// The position of painter object.
   final Offset position;

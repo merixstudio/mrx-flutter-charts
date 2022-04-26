@@ -1,4 +1,4 @@
-/// Provides value of axis.
+/// A collection of values for the selected axis.
 class ChartAxisValue {
   /// The max of axis's value.
   final double max;

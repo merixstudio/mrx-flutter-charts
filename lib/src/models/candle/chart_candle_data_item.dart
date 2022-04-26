@@ -1,6 +1,6 @@
 part of 'chart_candle_layer.dart';
 
-/// Provides data item of candle.
+/// A collection of values for a candle in a chart.
 class ChartCandleDataItem {
   /// The color of candle item.
   final Color color;
@@ -21,7 +21,7 @@ class ChartCandleDataItem {
     required this.x,
   });
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     value1.dispose();
     value2.dispose();

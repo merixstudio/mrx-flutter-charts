@@ -1,6 +1,6 @@
 part of 'chart_candle_layer.dart';
 
-/// Provides data item of candle.
+/// A collection of values for per value candle in a chart in.
 class ChartCandleDataItemValue {
   /// The max of data item.
   final double max;
@@ -49,7 +49,7 @@ class ChartCandleDataItemValue {
   /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   void dispose() {
     _color.dispose();
     _pos.dispose();

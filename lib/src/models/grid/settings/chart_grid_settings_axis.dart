@@ -1,20 +1,20 @@
 part of '../chart_grid_layer.dart';
 
-/// Provides settings of the selected axis.
+/// A collection of values for settings of the selected axis.
 class ChartGridSettingsAxis {
-  /// The color of grid in axis.
+  /// The color of grid in the axis.
   final Color color;
 
-  /// The frequency line of grid in axis.
+  /// The frequency line of grid in the axis.
   final double frequency;
 
-  /// The max of the value grid in axis.
+  /// The max of the value grid in the axis.
   final double max;
 
-  /// The min of the value grid in axis.
+  /// The min of the value grid in the axis.
   final double min;
 
-  /// The thickness line of grid in axis.
+  /// The thickness line of grid in the axis.
   ///
   /// Defaults to 1.0
   final double thickness;
@@ -27,7 +27,7 @@ class ChartGridSettingsAxis {
     this.thickness = 1.0,
   });
 
-  /// Generate all items of grid in axis.
+  /// Generate all items of grid in the axis.
   ChartGridData generate() => ChartGridData(
         items: List.generate(
           ((max - min) ~/ frequency) + 1,

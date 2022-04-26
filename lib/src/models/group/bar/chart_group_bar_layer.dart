@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 part 'chart_group_bar_data_item.dart';
 part 'chart_group_bar_settings.dart';
 
-/// Provides paint for group bar layer.
+/// This layer allows to render group bars.
 class ChartGroupBarLayer extends ChartLayer {
-  /// The items data of group bar.
+  /// The items data of group bars.
   final List<List<ChartGroupBarDataItem>> items;
 
-  /// The settings of group bar.
+  /// The settings of group bars.
   final ChartGroupBarSettings settings;
 
   const ChartGroupBarLayer({
@@ -19,7 +19,7 @@ class ChartGroupBarLayer extends ChartLayer {
     required this.settings,
   });
 
-  /// Dispose all animations.
+  /// Disposing all animations.
   @override
   void dispose() {
     for (final List<ChartGroupBarDataItem> item in items) {
