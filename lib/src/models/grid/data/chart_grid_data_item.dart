@@ -17,32 +17,32 @@ class ChartGridDataItem {
 
   /// Current color during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get currentColor => _color.current;
 
   /// Current end position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentEndPos => _endPos.current;
 
   /// Current start position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentStartPos => _startPos.current;
 
   /// Last color on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get lastColor => _color.last;
 
   /// Last end position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastEndPos => _endPos.last;
 
   /// Last start position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastStartPos => _startPos.last;
 
   /// Dispose all animations.

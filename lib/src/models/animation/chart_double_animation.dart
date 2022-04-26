@@ -9,12 +9,12 @@ class ChartDoubleAnimation implements ChartAnimation {
 
   /// Current value during the animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get current => _lastValue = _animation?.value ?? 0.0;
 
   /// Last double value on finish/stop animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get last => _lastValue;
 
   /// Dispose animation.

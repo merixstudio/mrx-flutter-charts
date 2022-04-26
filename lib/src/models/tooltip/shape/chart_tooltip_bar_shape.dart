@@ -7,7 +7,7 @@ class ChartTooltipBarShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The margin bottom of shape.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   final double marginBottom;
 
   /// The function return current position of shape.
@@ -21,7 +21,7 @@ class ChartTooltipBarShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The padding of shape.
   ///
-  /// Default to EdgeInsets.zero
+  /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
 
   /// The radius of shape.
@@ -32,7 +32,7 @@ class ChartTooltipBarShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The triangle side length of shape.
   ///
-  /// Default to 10.0
+  /// Defaults to 10.0
   final double triangleSideLength;
 
   const ChartTooltipBarShape({

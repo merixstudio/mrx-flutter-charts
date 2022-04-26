@@ -19,42 +19,42 @@ class ChartLineDataItem extends ChartDataItem {
 
   /// Current touch area position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentTouchPos => _touch.currentPos;
 
   /// Current touch area size during the animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get currentTouchSize => _touch.currentSize;
 
   /// Current color during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get currentValueColor => _value.currentColor;
 
   /// Current position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentValuePos => _value.currentPos;
 
   /// Last touch area position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastTouchPos => _touch.lastPos;
 
   /// Last touch area size on finish/stop animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get lastTouchSize => _touch.lastSize;
 
   /// Last color on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get lastValueColor => _value.lastColor;
 
   /// Last position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastValuePos => _value.lastPos;
 
   /// Dispose all animations.
@@ -112,22 +112,22 @@ class _ChartLineDataItemTouch {
 
   /// Current position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentPos => _pos.current;
 
   /// Current size during the animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get currentSize => _size.current;
 
   /// Last position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
   /// Last size on finish/stop animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
   /// Dispose all animations.
@@ -170,22 +170,22 @@ class _ChartLineDataItemValue {
 
   /// Current color during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get currentColor => _color.current;
 
   /// Current position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentPos => _pos.current;
 
   /// Last color on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get lastColor => _color.last;
 
   /// Last position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
   /// Dispose all animations.

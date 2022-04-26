@@ -13,12 +13,12 @@ class ChartTooltipLineShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The circle size of shape.
   ///
-  /// Default to 6.0
+  /// Defaults to 6.0
   final double circleSize;
 
   /// The circle border thickness of shape.
   ///
-  /// Default to 2.0
+  /// Defaults to 2.0
   final double circleBorderThickness;
 
   /// The function return current position of shape.
@@ -26,7 +26,7 @@ class ChartTooltipLineShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The margin bottom of shape.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   final double marginBottom;
 
   /// The return return text value of shape.
@@ -34,12 +34,12 @@ class ChartTooltipLineShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The padding of shape.
   ///
-  /// Default to EdgeInsets.zero
+  /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
 
   /// The radius of shape.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   final double radius;
 
   /// The TextStyle of shape.
@@ -47,7 +47,7 @@ class ChartTooltipLineShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The triangle side length of shape.
   ///
-  /// Default to 10.0
+  /// Defaults to 10.0
   final double triangleSideLength;
 
   const ChartTooltipLineShape({

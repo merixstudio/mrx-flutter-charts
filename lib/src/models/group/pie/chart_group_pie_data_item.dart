@@ -21,32 +21,32 @@ class ChartGroupPieDataItem extends ChartDataItem {
 
   /// Current color during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get currentValueColor => _value.currentColor;
 
   /// Current start during the animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get currentValueStart => _value.currentStart;
 
   /// Current sweep during the animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get currentValueSweep => _value.currentSweep;
 
   /// Last color on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get lastValueColor => _value.lastColor;
 
   /// Last start on finish/stop animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get lastValueStart => _value.lastStart;
 
   /// Last sweep on finish/stop animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get lastValueSweep => _value.lastSweep;
 
   /// Dispose all animations.
@@ -91,32 +91,32 @@ class _ChartGroupPieDataItemValue {
 
   /// Current color during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get currentColor => _color.current;
 
   /// Current start during the animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get currentStart => _start.current;
 
   /// Current sweep during the animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get currentSweep => _sweep.current;
 
   /// Last color value on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get lastColor => _color.last;
 
   /// Last double start on finish/stop animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get lastStart => _start.last;
 
   /// Last double sweep on finish/stop animation.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   double get lastSweep => _sweep.last;
 
   /// Dispose all animations.

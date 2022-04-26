@@ -4,12 +4,12 @@ part of 'chart_bar_layer.dart';
 class ChartBarSettings {
   /// The radius of bar.
   ///
-  /// Default to 4.0
+  /// Defaults to 4.0
   final BorderRadius radius;
 
   /// The thickness of bar.
   ///
-  /// Default to BorderRadius.zero
+  /// Defaults to BorderRadius.zero
   final double thickness;
 
   const ChartBarSettings({

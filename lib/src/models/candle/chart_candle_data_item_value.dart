@@ -21,32 +21,32 @@ class ChartCandleDataItemValue {
 
   /// Current color during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get currentColor => _color.current;
 
   /// Current position during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get currentPos => _pos.current;
 
   /// Current size during the animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get currentSize => _size.current;
 
   /// Last color on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get lastColor => _color.last;
 
   /// Last position on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
   /// Last size on finish/stop animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
   /// Dispose all animations.

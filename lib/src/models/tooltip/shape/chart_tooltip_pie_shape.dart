@@ -19,12 +19,12 @@ class ChartTooltipPieShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// The padding of shape.
   ///
-  /// Default to EdgeInsets.zero
+  /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
 
   /// The radius of shape.
   ///
-  /// Default to 0.0
+  /// Defaults to 0.0
   final double radius;
 
   const ChartTooltipPieShape({

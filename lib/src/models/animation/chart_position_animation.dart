@@ -9,12 +9,12 @@ class ChartPositionAnimation implements ChartAnimation {
 
   /// Current value during the animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get current => _lastPosition = _animation?.value ?? Offset.zero;
 
   /// Last value on finish/stop animation.
   ///
-  /// Default to Offset.zero
+  /// Defaults to Offset.zero
   Offset get last => _lastPosition;
 
   /// Dispose animation.

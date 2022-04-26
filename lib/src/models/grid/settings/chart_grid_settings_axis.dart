@@ -16,7 +16,7 @@ class ChartGridSettingsAxis {
 
   /// The thickness line of grid in axis.
   ///
-  /// Default to 1.0
+  /// Defaults to 1.0
   final double thickness;
 
   const ChartGridSettingsAxis({

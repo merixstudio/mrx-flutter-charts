@@ -9,12 +9,12 @@ class ChartSizeAnimation implements ChartAnimation {
 
   /// Current value during the animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get current => _lastSize = _animation?.value ?? Size.zero;
 
   /// Last value on finish/stop animation.
   ///
-  /// Default to Size.zero
+  /// Defaults to Size.zero
   Size get last => _lastSize;
 
   /// Dispose animation.

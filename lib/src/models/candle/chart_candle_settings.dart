@@ -4,12 +4,12 @@ part of 'chart_candle_layer.dart';
 class ChartCandleSettings {
   /// The radius of candle.
   ///
-  /// Default to 4.0
+  /// Defaults to 4.0
   final double radius;
 
   /// The thickness of candle.
   ///
-  /// Default to 8.0
+  /// Defaults to 8.0
   final double thickness;
 
   const ChartCandleSettings({

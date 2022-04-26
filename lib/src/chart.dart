@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class Chart extends StatefulWidget {
   /// The duration animation of charts.
   ///
-  /// Default to Duration(milliseconds: 300)
+  /// Defaults to Duration(milliseconds: 300)
   final Duration duration;
 
   /// The layers of charts.
@@ -18,7 +18,7 @@ class Chart extends StatefulWidget {
 
   /// The padding of charts.
   ///
-  /// Default to EdgeInsets.zero
+  /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
 
   const Chart({

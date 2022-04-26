@@ -14,7 +14,7 @@ class ChartHighlightLineShape<T extends ChartDataItem>
 
   /// The radius of shape.
   ///
-  /// Default to BorderRadius.zero
+  /// Defaults to BorderRadius.zero
   final BorderRadius radius;
 
   const ChartHighlightLineShape({

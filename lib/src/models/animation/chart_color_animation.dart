@@ -9,12 +9,12 @@ class ChartColorAnimation implements ChartAnimation {
 
   /// Current value during the animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get current => _lastColor = _animation?.value ?? Colors.transparent;
 
   /// Last value on finish/stop animation.
   ///
-  /// Default to Colors.transparent
+  /// Defaults to Colors.transparent
   Color get last => _lastColor;
 
   /// Dispose animation.

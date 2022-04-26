@@ -4,27 +4,27 @@ part of 'chart_group_pie_layer.dart';
 class ChartGroupPieSettings {
   /// The angle offset of group pie.
   ///
-  /// Default to 30.0
+  /// Defaults to 30.0
   final double angleOffset;
 
   /// The gap between chart circles of group pie.
   ///
-  /// Default to 20.0
+  /// Defaults to 20.0
   final double gapBetweenChartCircles;
 
   /// The gap sweep angle of group pie.
   ///
-  /// Default to 10.0
+  /// Defaults to 10.0
   final double gapSweepAngle;
 
   /// The radius of group pie.
   ///
-  /// Default to 4.0
+  /// Defaults to 4.0
   final double radius;
 
   /// The thickness of group pie.
   ///
-  /// Default to 8.0
+  /// Defaults to 8.0
   final double thickness;
 
   const ChartGroupPieSettings({
