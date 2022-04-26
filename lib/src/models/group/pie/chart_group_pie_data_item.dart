@@ -19,32 +19,32 @@ class ChartGroupPieDataItem extends ChartDataItem {
     required this.label,
   }) : _value = _ChartGroupPieDataItemValue();
 
-  /// Current color value in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentValueColor => _value.currentColor;
 
-  /// Current double start in while animation.
+  /// Current start during the animation.
   ///
   /// Default to 0.0
   double get currentValueStart => _value.currentStart;
 
-  /// Current double sweep in while animation.
+  /// Current sweep during the animation.
   ///
   /// Default to 0.0
   double get currentValueSweep => _value.currentSweep;
 
-  /// Last color value on finish/stop animation.
+  /// Last color on finish/stop animation.
   ///
   /// Default to Colors.transparent
   Color get lastValueColor => _value.lastColor;
 
-  /// Last double start on finish/stop animation.
+  /// Last start on finish/stop animation.
   ///
   /// Default to 0.0
   double get lastValueStart => _value.lastStart;
 
-  /// Last double sweep on finish/stop animation.
+  /// Last sweep on finish/stop animation.
   ///
   /// Default to 0.0
   double get lastValueSweep => _value.lastSweep;
@@ -89,17 +89,17 @@ class _ChartGroupPieDataItemValue {
         _start = ChartDoubleAnimation(),
         _sweep = ChartDoubleAnimation();
 
-  /// Current color value in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentColor => _color.current;
 
-  /// Current double start in while animation.
+  /// Current start during the animation.
   ///
   /// Default to 0.0
   double get currentStart => _start.current;
 
-  /// Current double sweep in while animation.
+  /// Current sweep during the animation.
   ///
   /// Default to 0.0
   double get currentSweep => _sweep.current;

@@ -21,27 +21,27 @@ class ChartBarDataItem extends ChartDataItem {
   })  : _touch = _ChartBarDataItemTouch(),
         _value = _ChartBarDataItemValue();
 
-  /// Current touch area position in while animation.
+  /// Current touch area position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentTouchPos => _touch.currentPos;
 
-  /// Current touch area size in while animation.
+  /// Current touch area size during the animation.
   ///
   /// Default to Size.zero
   Size get currentTouchSize => _touch.currentSize;
 
-  /// Current color in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentValueColor => _value.currentColor;
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentValuePos => _value.currentPos;
 
-  /// Current size in while animation.
+  /// Current size during the animation.
   ///
   /// Default to Size.zero
   Size get currentValueSize => _value.currentSize;
@@ -129,12 +129,12 @@ class _ChartBarDataItemTouch {
       : _pos = ChartPositionAnimation(),
         _size = ChartSizeAnimation();
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentPos => _pos.current;
 
-  /// Current size in while animation.
+  /// Current size during the animation.
   ///
   /// Default to Size.zero
   Size get currentSize => _size.current;
@@ -191,17 +191,17 @@ class _ChartBarDataItemValue {
         _pos = ChartPositionAnimation(),
         _size = ChartSizeAnimation();
 
-  /// Current color in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentColor => _color.current;
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentPos => _pos.current;
 
-  /// Current size in while animation.
+  /// Current size during the animation.
   ///
   /// Default to Size.zero
   Size get currentSize => _size.current;

@@ -17,22 +17,22 @@ class ChartLineDataItem extends ChartDataItem {
   })  : _touch = _ChartLineDataItemTouch(),
         _value = _ChartLineDataItemValue();
 
-  /// Current touch area position in while animation.
+  /// Current touch area position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentTouchPos => _touch.currentPos;
 
-  /// Current touch area size in while animation.
+  /// Current touch area size during the animation.
   ///
   /// Default to Size.zero
   Size get currentTouchSize => _touch.currentSize;
 
-  /// Current color in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentValueColor => _value.currentColor;
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentValuePos => _value.currentPos;
@@ -110,12 +110,12 @@ class _ChartLineDataItemTouch {
       : _pos = ChartPositionAnimation(),
         _size = ChartSizeAnimation();
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentPos => _pos.current;
 
-  /// Current size in while animation.
+  /// Current size during the animation.
   ///
   /// Default to Size.zero
   Size get currentSize => _size.current;
@@ -168,12 +168,12 @@ class _ChartLineDataItemValue {
       : _color = ChartColorAnimation(),
         _pos = ChartPositionAnimation();
 
-  /// Current color in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentColor => _color.current;
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentPos => _pos.current;

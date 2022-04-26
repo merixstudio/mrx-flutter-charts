@@ -1,4 +1,4 @@
-/// Base class for custom layer that allows render in custom paint.
+/// Abstract class for custom layer.
 abstract class ChartLayer {
   const ChartLayer();
 

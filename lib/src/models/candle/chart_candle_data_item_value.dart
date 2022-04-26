@@ -19,17 +19,17 @@ class ChartCandleDataItemValue {
         _pos = ChartPositionAnimation(),
         _size = ChartSizeAnimation();
 
-  /// Current color in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentColor => _color.current;
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentPos => _pos.current;
 
-  /// Current size in while animation.
+  /// Current size during the animation.
   ///
   /// Default to Size.zero
   Size get currentSize => _size.current;

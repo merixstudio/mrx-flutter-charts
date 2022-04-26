@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-/// Base class for touchable shape that allows detect custom object.
+/// Abstract class for touchable shape.
 abstract class TouchableShape<T> {
   TouchableShape({
     required this.data,

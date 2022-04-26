@@ -17,16 +17,14 @@ class ChartAxisDataItem {
   })  : _pos = ChartPositionAnimation(),
         _textStyle = ChartTextStyleAnimation();
 
-  /// Current position in while animation.
+  /// Current position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentPos => _pos.current;
 
-  /// Current TextStyle in while animation.
+  /// Current TextStyle during the animation.
   ///
-  /// Default to TextStyle(
-  ///               color: Colors.transparent,
-  ///            )
+  /// Default to TextStyle(color: Colors.transparent)
   TextStyle get currentTextStyle => _textStyle.current;
 
   /// Last position on finish/stop animation.
@@ -36,9 +34,7 @@ class ChartAxisDataItem {
 
   /// Last TextStyle on finish/stop animation.
   ///
-  /// Default to TextStyle(
-  ///               color: Colors.transparent,
-  ///            )
+  /// Default to TextStyle(color: Colors.transparent)
   TextStyle get lastTextStyle => _textStyle.last;
 
   /// Dispose all animations.

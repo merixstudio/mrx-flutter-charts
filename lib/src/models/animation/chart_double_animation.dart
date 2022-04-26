@@ -7,7 +7,7 @@ class ChartDoubleAnimation implements ChartAnimation {
 
   ChartDoubleAnimation();
 
-  /// Current double value in while animation.
+  /// Current value during the animation.
   ///
   /// Default to 0.0
   double get current => _lastValue = _animation?.value ?? 0.0;

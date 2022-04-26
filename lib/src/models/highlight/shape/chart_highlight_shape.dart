@@ -5,11 +5,10 @@ import 'package:flutter/material.dart';
 
 part 'chart_highlight_line_shape.dart';
 
-/// Base class for hightlight shape that allows draw custom shape.
+/// Abstract class for hightlight shape.
 abstract class ChartHighlightShape {
   const ChartHighlightShape();
 
   /// Draw custom shape.
-  void draw(Canvas canvas, ChartPainterData painterData,
-      ChartTouchCallbackData touchedData, double tolerance);
+  void draw(Canvas canvas, ChartPainterData painterData, ChartTouchCallbackData touchedData, double tolerance);
 }

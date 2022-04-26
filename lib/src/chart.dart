@@ -10,9 +10,7 @@ import 'package:flutter/material.dart';
 class Chart extends StatefulWidget {
   /// The duration animation of charts.
   ///
-  /// Default to Duration(
-  ///               milliseconds: 300,
-  ///            )
+  /// Default to Duration(milliseconds: 300)
   final Duration duration;
 
   /// The layers of charts.
@@ -103,8 +101,7 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
                   controller: _controller,
                   layers: widget.layers,
                   oldLayers: oldLayers,
-                  onUpdateTouchableShapes: (shapes) =>
-                      _touchableShapes = shapes,
+                  onUpdateTouchableShapes: (shapes) => _touchableShapes = shapes,
                   padding: widget.padding,
                   touchedData: _touchedData,
                 ),

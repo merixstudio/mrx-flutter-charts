@@ -49,13 +49,11 @@ class ChartTooltipBarShape<T extends ChartDataItem> extends ChartTooltipShape {
 
   /// Draw tooltip bar shape.
   @override
-  void draw(Canvas canvas, ChartPainterData painterData,
-      ChartTouchCallbackData touchedData, double tolerance) {
+  void draw(Canvas canvas, ChartPainterData painterData, ChartTouchCallbackData touchedData, double tolerance) {
     final T item = touchedData.selectedItem as T;
     final Offset currentValuePos = currentPos(item);
     final Size currentValueSize = currentSize(item);
-    final Offset itemPos = Offset(
-        currentValuePos.dx + currentValueSize.width / 2.0, currentValuePos.dy);
+    final Offset itemPos = Offset(currentValuePos.dx + currentValueSize.width / 2.0, currentValuePos.dy);
     final TextPainter textPainter = TextPainter(
       text: TextSpan(
         text: onTextValue(item),
@@ -65,11 +63,7 @@ class ChartTooltipBarShape<T extends ChartDataItem> extends ChartTooltipShape {
     )..layout();
     final Offset pos = Offset(
       itemPos.dx - textPainter.width / 2.0,
-      itemPos.dy -
-          textPainter.height -
-          padding.vertical / 2.0 -
-          marginBottom -
-          triangleSideLength * 0.5,
+      itemPos.dy - textPainter.height - padding.vertical / 2.0 - marginBottom - triangleSideLength * 0.5,
     );
     final Offset rectPos = Offset(
       pos.dx - padding.horizontal / 2.0,
@@ -82,22 +76,15 @@ class ChartTooltipBarShape<T extends ChartDataItem> extends ChartTooltipShape {
     final Offset offsetRectAndText = Offset(
       painterData.position.dx - tolerance > rectPos.dx
           ? -(painterData.position.dx - tolerance - rectPos.dx)
-          : painterData.position.dx + tolerance + painterData.size.width <
-                  rectPos.dx + rectSize.width
-              ? -(painterData.position.dx +
-                  painterData.size.width +
-                  tolerance -
-                  rectPos.dx -
-                  rectSize.width)
+          : painterData.position.dx + tolerance + painterData.size.width < rectPos.dx + rectSize.width
+              ? -(painterData.position.dx + painterData.size.width + tolerance - rectPos.dx - rectSize.width)
               : 0.0,
       rectPos.dy < 0 ? rectPos.dy : 0.0,
     );
     final Path rectanglePath = Path()
       ..addRRect(
         RRect.fromRectAndRadius(
-          Offset(rectPos.dx - offsetRectAndText.dx,
-                  rectPos.dy - offsetRectAndText.dy) &
-              rectSize,
+          Offset(rectPos.dx - offsetRectAndText.dx, rectPos.dy - offsetRectAndText.dy) & rectSize,
           Radius.circular(radius),
         ),
       );

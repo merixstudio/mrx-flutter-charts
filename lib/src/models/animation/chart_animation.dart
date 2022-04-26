@@ -6,7 +6,7 @@ part 'chart_position_animation.dart';
 part 'chart_size_animation.dart';
 part 'chart_text_style_animation.dart';
 
-/// Base class for animation that allows animation values.
+/// Abstract class for animation.
 abstract class ChartAnimation {
   void dispose();
 }

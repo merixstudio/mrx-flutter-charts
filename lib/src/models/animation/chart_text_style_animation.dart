@@ -9,21 +9,17 @@ class ChartTextStyleAnimation implements ChartAnimation {
 
   ChartTextStyleAnimation();
 
-  /// Current TextStyle value in while animation.
+  /// Current value during the animation.
   ///
-  /// Default to TextStyle(
-  ///               color: Colors.transparent,
-  ///            )
+  /// Default to TextStyle(color: Colors.transparent)
   TextStyle get current => _lastTextStyle = _animation?.value ??
       const TextStyle(
         color: Colors.transparent,
       );
 
-  /// Last TextStyle value on finish/stop animation.
+  /// Last value on finish/stop animation.
   ///
-  /// Default to TextStyle(
-  ///               color: Colors.transparent,
-  ///            )
+  /// Default to TextStyle(color: Colors.transparent)
   TextStyle get last => _lastTextStyle;
 
   /// Dispose animation.

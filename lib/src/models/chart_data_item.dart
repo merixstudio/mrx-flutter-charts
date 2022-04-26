@@ -1,4 +1,4 @@
-/// Base class for data item.
+/// Abstract class for data item.
 abstract class ChartDataItem {
   const ChartDataItem();
 

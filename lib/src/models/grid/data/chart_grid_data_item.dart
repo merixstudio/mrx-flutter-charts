@@ -15,17 +15,17 @@ class ChartGridDataItem {
         _endPos = ChartPositionAnimation(),
         _startPos = ChartPositionAnimation();
 
-  /// Current color in while animation.
+  /// Current color during the animation.
   ///
   /// Default to Colors.transparent
   Color get currentColor => _color.current;
 
-  /// Current end position in while animation.
+  /// Current end position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentEndPos => _endPos.current;
 
-  /// Current start position in while animation.
+  /// Current start position during the animation.
   ///
   /// Default to Offset.zero
   Offset get currentStartPos => _startPos.current;
