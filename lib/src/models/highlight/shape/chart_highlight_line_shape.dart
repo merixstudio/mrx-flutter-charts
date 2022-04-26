@@ -1,7 +1,8 @@
 part of 'chart_highlight_shape.dart';
 
 /// Provides highlight line shape.
-class ChartHighlightLineShape<T extends ChartDataItem> extends ChartHighlightShape {
+class ChartHighlightLineShape<T extends ChartDataItem>
+    extends ChartHighlightShape {
   /// The background color of shape.
   final Color backgroundColor;
 
@@ -25,7 +26,8 @@ class ChartHighlightLineShape<T extends ChartDataItem> extends ChartHighlightSha
 
   /// Draw highlight line shape.
   @override
-  void draw(Canvas canvas, ChartPainterData painterData, ChartTouchCallbackData touchedData, double tolerance) {
+  void draw(Canvas canvas, ChartPainterData painterData,
+      ChartTouchCallbackData touchedData, double tolerance) {
     final T item = touchedData.selectedItem as T;
     final Offset currentValuePos = currentPos(item);
     final Offset pos = Offset(

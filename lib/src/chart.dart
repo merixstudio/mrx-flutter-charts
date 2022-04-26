@@ -101,7 +101,8 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
                   controller: _controller,
                   layers: widget.layers,
                   oldLayers: oldLayers,
-                  onUpdateTouchableShapes: (shapes) => _touchableShapes = shapes,
+                  onUpdateTouchableShapes: (shapes) =>
+                      _touchableShapes = shapes,
                   padding: widget.padding,
                   touchedData: _touchedData,
                 ),

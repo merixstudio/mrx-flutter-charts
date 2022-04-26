@@ -10,5 +10,6 @@ abstract class ChartHighlightShape {
   const ChartHighlightShape();
 
   /// Draw custom shape.
-  void draw(Canvas canvas, ChartPainterData painterData, ChartTouchCallbackData touchedData, double tolerance);
+  void draw(Canvas canvas, ChartPainterData painterData,
+      ChartTouchCallbackData touchedData, double tolerance);
 }
