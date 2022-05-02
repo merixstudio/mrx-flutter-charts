@@ -3,12 +3,22 @@ import 'package:mrx_charts/src/models/chart_layer.dart';
 import 'package:mrx_charts/src/models/touchable/touchable_shape.dart';
 import 'package:mrx_charts/src/painter/chart_painter.dart';
 import 'package:mrx_charts/src/touch/chart_touch_detector.dart';
-import 'package:mrx_charts/src/touch/stock_touch_callback_data.dart';
+import 'package:mrx_charts/src/touch/chart_touch_callback_data.dart';
 import 'package:flutter/material.dart';
 
+/// Widget of charts.
 class Chart extends StatefulWidget {
+  /// The duration of the chart animations.
+  ///
+  /// Defaults to Duration(milliseconds: 300)
   final Duration duration;
+
+  /// The layers of charts.
   final List<ChartLayer> layers;
+
+  /// The padding of charts.
+  ///
+  /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
 
   const Chart({

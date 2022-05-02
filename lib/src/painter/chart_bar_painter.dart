@@ -1,8 +1,10 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for bar.
 class _ChartBarPainter {
   const _ChartBarPainter._();
 
+  /// Draw bar.
   static void draw({
     required Canvas canvas,
     required AnimationController controller,

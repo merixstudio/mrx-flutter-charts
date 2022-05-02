@@ -1,9 +1,16 @@
 part of 'chart_group_bar_layer.dart';
 
+/// A collection of values for a group bar in a chart.
 class ChartGroupBarDataItem extends ChartDataItem {
+  /// The color of data item.
   final Color color;
+
+  /// The value of data item.
   final double value;
+
+  /// The axis x of data item.
   final double x;
+
   final _ChartGroupBarDataItemTouch _touch;
   final _ChartGroupBarDataItemValue _value;
 
@@ -14,31 +21,63 @@ class ChartGroupBarDataItem extends ChartDataItem {
   })  : _touch = _ChartGroupBarDataItemTouch(),
         _value = _ChartGroupBarDataItemValue();
 
+  /// Current touch area position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentTouchPos => _touch.currentPos;
 
+  /// Current touch area size during the animation.
+  ///
+  /// Defaults to Size.zero
   Size get currentTouchSize => _touch.currentSize;
 
+  /// Current color during the animation.
+  ///
+  /// Defaults to Colors.transparent
   Color get currentValueColor => _value.currentColor;
 
+  /// Current position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentValuePos => _value.currentPos;
 
+  /// Current size during the animation.
+  ///
+  /// Defaults to Size.zero
   Size get currentValueSize => _value.currentSize;
 
+  /// Last touch area position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastTouchPos => _touch.lastPos;
 
+  /// Last touch area size on finish/stop animation.
+  ///
+  /// Defaults to Size.zero
   Size get lastTouchSize => _touch.lastSize;
 
+  /// Last color on finish/stop animation.
+  ///
+  /// Defaults to Colors.transparent
   Color get lastValueColor => _value.lastColor;
 
+  /// Last position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastValuePos => _value.lastPos;
 
+  /// Last size on finish/stop animation.
+  ///
+  /// Defaults to Size.zero
   Size get lastValueSize => _value.lastSize;
 
+  /// Dispose all animations.
   @override
   void dispose() {
     _value.dispose();
   }
 
+  /// Initialize touch area animations.
   void setupTouch({
     required AnimationController controller,
     required Offset pos,
@@ -57,6 +96,7 @@ class ChartGroupBarDataItem extends ChartDataItem {
     );
   }
 
+  /// Initialuze value animations.
   void setupValue({
     required Color color,
     required AnimationController controller,
@@ -88,19 +128,33 @@ class _ChartGroupBarDataItemTouch {
       : _pos = ChartPositionAnimation(),
         _size = ChartSizeAnimation();
 
+  /// Current position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentPos => _pos.current;
 
+  /// Current size during the animation.
+  ///
+  /// Defaults to Size.zero
   Size get currentSize => _size.current;
 
+  /// Last position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
+  /// Last size on finish/stop animation.
+  ///
+  /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
+  /// Dispose all animations.
   void dispose() {
     _pos.dispose();
     _size.dispose();
   }
 
+  /// Initialize animations.
   void setup({
     required AnimationController controller,
     required Offset pos,
@@ -136,24 +190,44 @@ class _ChartGroupBarDataItemValue {
         _pos = ChartPositionAnimation(),
         _size = ChartSizeAnimation();
 
+  /// Current color during the animation.
+  ///
+  /// Defaults to Colors.transparent
   Color get currentColor => _color.current;
 
+  /// Current position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentPos => _pos.current;
 
+  /// Current size during the animation.
+  ///
+  /// Defaults to Size.zero
   Size get currentSize => _size.current;
 
+  /// Last color on finish/stop animation.
+  ///
+  /// Defaults to Colors.transparent
   Color get lastColor => _color.last;
 
+  /// Last position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
+  /// Last size on finish/stop animation.
+  ///
+  /// Defaults to Size.zero
   Size get lastSize => _size.last;
 
+  /// Dispose all animations.
   void dispose() {
     _color.dispose();
     _pos.dispose();
     _size.dispose();
   }
 
+  /// Initialize animations.
   void setup({
     required Color color,
     required AnimationController controller,

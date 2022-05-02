@@ -1,10 +1,12 @@
 part of 'chart_painter.dart';
 
+/// Layer painter for group pie.
 class _ChartGroupPiePainter {
   const _ChartGroupPiePainter._();
 
   static double _sliceCursor = 0.0;
 
+  /// Draw group pie.
   static void draw({
     required Canvas canvas,
     required AnimationController controller,

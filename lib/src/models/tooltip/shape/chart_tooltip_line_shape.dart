@@ -1,17 +1,53 @@
 part of 'chart_tooltip_shape.dart';
 
+/// Provides tooltip line shape.
 class ChartTooltipLineShape<T extends ChartDataItem> extends ChartTooltipShape {
+  /// The background color of shape.
   final Color backgroundColor;
+
+  /// The circle background color of shape.
   final Color circleBackgroundColor;
+
+  /// The circle border background color of shape.
   final Color circleBorderColor;
+
+  /// The circle size of shape.
+  ///
+  /// Defaults to 6.0
   final double circleSize;
+
+  /// The circle border thickness of shape.
+  ///
+  /// Defaults to 2.0
   final double circleBorderThickness;
+
+  /// The function return current position of shape.
   final Offset Function(T) currentPos;
+
+  /// The margin bottom of shape.
+  ///
+  /// Defaults to 0.0
   final double marginBottom;
+
+  /// The return return text value of shape.
   final String Function(T) onTextValue;
+
+  /// The padding of shape.
+  ///
+  /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
+
+  /// The radius of shape.
+  ///
+  /// Defaults to 0.0
   final double radius;
+
+  /// The TextStyle of shape.
   final TextStyle textStyle;
+
+  /// The triangle side length of shape.
+  ///
+  /// Defaults to 10.0
   final double triangleSideLength;
 
   const ChartTooltipLineShape({
@@ -29,6 +65,7 @@ class ChartTooltipLineShape<T extends ChartDataItem> extends ChartTooltipShape {
     this.triangleSideLength = 10.0,
   });
 
+  /// Draw tooltip line shape.
   @override
   void draw(Canvas canvas, ChartPainterData painterData,
       ChartTouchCallbackData touchedData, double tolerance) {

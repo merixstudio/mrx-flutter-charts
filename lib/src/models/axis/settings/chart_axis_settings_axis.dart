@@ -1,9 +1,17 @@
 part of '../chart_axis_layer.dart';
 
+/// A collection of values for settings of the selected axis.
 class ChartAxisSettingsAxis {
+  /// The frequency of the value.
   final double frequency;
+
+  /// The max of the value in the axis.
   final double max;
+
+  /// The min of the value in the axis.
   final double min;
+
+  /// The TextStyle in axis.
   final TextStyle textStyle;
 
   const ChartAxisSettingsAxis({
@@ -13,6 +21,7 @@ class ChartAxisSettingsAxis {
     required this.textStyle,
   });
 
+  /// Generate all items of axis.
   ChartAxisData generate({
     required String Function(double) label,
   }) =>

@@ -1,7 +1,11 @@
 part of '../chart_axis_layer.dart';
 
+/// A collection of values for an axis in a chart.
 class ChartAxisDataItem {
+  /// The label of data item.
   final String label;
+
+  /// The value of data item.
   final double value;
 
   final ChartPositionAnimation _pos;
@@ -13,19 +17,33 @@ class ChartAxisDataItem {
   })  : _pos = ChartPositionAnimation(),
         _textStyle = ChartTextStyleAnimation();
 
+  /// Current position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentPos => _pos.current;
 
+  /// Current TextStyle during the animation.
+  ///
+  /// Defaults to TextStyle(color: Colors.transparent)
   TextStyle get currentTextStyle => _textStyle.current;
 
+  /// Last position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastPos => _pos.last;
 
+  /// Last TextStyle on finish/stop animation.
+  ///
+  /// Defaults to TextStyle(color: Colors.transparent)
   TextStyle get lastTextStyle => _textStyle.last;
 
+  /// Disposing all animations.
   void dispose() {
     _pos.dispose();
     _textStyle.dispose();
   }
 
+  /// Initialize animation.
   void setup({
     required AnimationController controller,
     required Offset pos,

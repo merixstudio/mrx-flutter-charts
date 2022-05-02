@@ -1,3 +1,5 @@
+library mrx_charts;
+
 export 'src/chart.dart';
 export 'src/models/animation/chart_animation.dart';
 export 'src/models/axis/chart_axis_layer.dart';
@@ -19,5 +21,5 @@ export 'src/models/touchable/arc_shape.dart';
 export 'src/models/touchable/rectangle_shape.dart';
 export 'src/models/touchable/touchable_shape.dart';
 export 'src/painter/chart_painter.dart';
+export 'src/touch/chart_touch_callback_data.dart';
 export 'src/touch/chart_touch_detector.dart';
-export 'src/touch/stock_touch_callback_data.dart';

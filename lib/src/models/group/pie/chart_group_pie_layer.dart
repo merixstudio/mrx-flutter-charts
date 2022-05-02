@@ -6,8 +6,12 @@ import 'package:flutter/material.dart';
 part 'chart_group_pie_data_item.dart';
 part 'chart_group_pie_settings.dart';
 
+/// This layer allows to render group pies.
 class ChartGroupPieLayer extends ChartLayer {
+  /// The items data of group pies.
   final List<List<ChartGroupPieDataItem>> items;
+
+  /// The settings of group pies.
   final ChartGroupPieSettings settings;
 
   const ChartGroupPieLayer({
@@ -15,6 +19,7 @@ class ChartGroupPieLayer extends ChartLayer {
     required this.settings,
   });
 
+  /// Disposing all animations.
   @override
   void dispose() {
     for (final List<ChartGroupPieDataItem> item in items) {

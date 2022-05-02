@@ -1,6 +1,8 @@
 part of '../chart_grid_layer.dart';
 
+/// A collection of values for a grid in a chart.
 class ChartGridDataItem {
+  /// The value of data item.
   final double value;
 
   final ChartColorAnimation _color;
@@ -13,24 +15,44 @@ class ChartGridDataItem {
         _endPos = ChartPositionAnimation(),
         _startPos = ChartPositionAnimation();
 
+  /// Current color during the animation.
+  ///
+  /// Defaults to Colors.transparent
   Color get currentColor => _color.current;
 
+  /// Current end position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentEndPos => _endPos.current;
 
+  /// Current start position during the animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get currentStartPos => _startPos.current;
 
+  /// Last color on finish/stop animation.
+  ///
+  /// Defaults to Colors.transparent
   Color get lastColor => _color.last;
 
+  /// Last end position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastEndPos => _endPos.last;
 
+  /// Last start position on finish/stop animation.
+  ///
+  /// Defaults to Offset.zero
   Offset get lastStartPos => _startPos.last;
 
+  /// Disposing all animations.
   void dispose() {
     _color.dispose();
     _endPos.dispose();
     _startPos.dispose();
   }
 
+  /// Initialize animations.
   void setup({
     required AnimationController controller,
     required Color color,

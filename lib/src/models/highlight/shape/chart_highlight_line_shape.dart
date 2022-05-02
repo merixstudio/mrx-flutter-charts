@@ -1,10 +1,20 @@
 part of 'chart_highlight_shape.dart';
 
+/// Provides highlight line shape.
 class ChartHighlightLineShape<T extends ChartDataItem>
     extends ChartHighlightShape {
+  /// The background color of shape.
   final Color backgroundColor;
+
+  /// The width of shape.
   final double width;
+
+  /// The function return current position of shape.
   final Offset Function(T) currentPos;
+
+  /// The radius of shape.
+  ///
+  /// Defaults to BorderRadius.zero
   final BorderRadius radius;
 
   const ChartHighlightLineShape({
@@ -14,6 +24,7 @@ class ChartHighlightLineShape<T extends ChartDataItem>
     this.radius = BorderRadius.zero,
   });
 
+  /// Draw highlight line shape.
   @override
   void draw(Canvas canvas, ChartPainterData painterData,
       ChartTouchCallbackData touchedData, double tolerance) {

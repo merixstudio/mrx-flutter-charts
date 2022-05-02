@@ -7,9 +7,15 @@ part 'data/chart_axis_data_item.dart';
 part 'settings/chart_axis_settings.dart';
 part 'settings/chart_axis_settings_axis.dart';
 
+/// This layer allows to render axises.
 class ChartAxisLayer extends ChartLayer {
+  /// The x of the axis.
   final ChartAxisData x;
+
+  /// The y of the axis.
   final ChartAxisData y;
+
+  /// The settings of the axis.
   final ChartAxisSettings settings;
 
   ChartAxisLayer({
@@ -23,6 +29,7 @@ class ChartAxisLayer extends ChartLayer {
           label: labelY,
         );
 
+  /// Disposing all animations.
   @override
   void dispose() {
     x.dispose();

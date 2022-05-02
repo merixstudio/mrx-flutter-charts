@@ -6,8 +6,12 @@ import 'package:flutter/material.dart';
 part 'chart_line_data_item.dart';
 part 'chart_line_settings.dart';
 
+/// This layer allows to render lines.
 class ChartLineLayer extends ChartLayer {
+  /// The items data of lines.
   final List<ChartLineDataItem> items;
+
+  /// The settings of lines.
   final ChartLineSettings settings;
 
   const ChartLineLayer({
@@ -15,6 +19,7 @@ class ChartLineLayer extends ChartLayer {
     required this.settings,
   });
 
+  /// Disposing all animations.
   @override
   void dispose() {
     for (final ChartLineDataItem item in items) {

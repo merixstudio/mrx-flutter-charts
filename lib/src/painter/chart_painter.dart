@@ -18,7 +18,7 @@ import 'package:mrx_charts/src/models/tooltip/shape/chart_tooltip_shape.dart';
 import 'package:mrx_charts/src/models/touchable/arc_shape.dart';
 import 'package:mrx_charts/src/models/touchable/rectangle_shape.dart';
 import 'package:mrx_charts/src/models/touchable/touchable_shape.dart';
-import 'package:mrx_charts/src/touch/stock_touch_callback_data.dart';
+import 'package:mrx_charts/src/touch/chart_touch_callback_data.dart';
 import 'package:flutter/material.dart';
 
 part 'chart_axis_painter.dart';
@@ -34,6 +34,7 @@ part 'chart_tooltip_painter.dart';
 typedef UpdateTouchableShapesCallback = void Function(
     List<TouchableShape<ChartDataItem>> touchableShapes);
 
+/// Provides chart painter.
 class ChartPainter extends CustomPainter {
   ChartPainter({
     required this.controller,
@@ -44,19 +45,29 @@ class ChartPainter extends CustomPainter {
     this.touchedData,
   });
 
+  /// The controller from animation.
   final AnimationController controller;
+
+  /// The list of layers.
   final List<ChartLayer> layers;
+
+  /// The padding of main sheet.
   final EdgeInsets padding;
+
+  /// The previous layers.
   final List<ChartLayer>? oldLayers;
 
   ///Only used if graph uses a touch events
   final UpdateTouchableShapesCallback? onUpdateTouchableShapes;
+
+  /// The touchedData has been last clicked.
   final ChartTouchCallbackData? touchedData;
 
   ChartPainterData _axisXPainterData = const ChartPainterData.empty();
   ChartPainterData _axisYPainterData = const ChartPainterData.empty();
   ChartPainterData _sheetPainterData = const ChartPainterData.empty();
 
+  /// Draw charts.
   @override
   void paint(Canvas canvas, Size size) {
     final ChartTouchCallbackData? currentTouchedData = touchedData;
