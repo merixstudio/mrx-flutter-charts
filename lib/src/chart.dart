@@ -47,7 +47,7 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
       duration: widget.duration,
       vsync: this,
     );
-    WidgetsBinding.instance?.addPostFrameCallback(
+    WidgetsBinding.instance.addPostFrameCallback(
       (_) => _controller
         ..stop()
         ..reset()
