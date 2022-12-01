@@ -1,0 +1,4 @@
+enum ChartTouchType {
+  click,
+  hover,
+}
