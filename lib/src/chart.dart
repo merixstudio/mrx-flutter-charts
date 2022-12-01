@@ -1,5 +1,6 @@
 import 'package:mrx_charts/src/models/chart_data_item.dart';
 import 'package:mrx_charts/src/models/chart_layer.dart';
+import 'package:mrx_charts/src/models/enum/chart_touch_type.dart';
 import 'package:mrx_charts/src/models/touchable/touchable_shape.dart';
 import 'package:mrx_charts/src/painter/chart_painter.dart';
 import 'package:mrx_charts/src/touch/chart_touch_detector.dart';
@@ -21,12 +22,16 @@ class Chart extends StatefulWidget {
   /// Defaults to EdgeInsets.zero
   final EdgeInsets padding;
 
+  // The type of method click.
+  final ChartTouchType type;
+
   const Chart({
     this.duration = const Duration(
       milliseconds: 300,
     ),
     this.layers = const [],
     this.padding = EdgeInsets.zero,
+    this.type = ChartTouchType.click,
     Key? key,
   }) : super(key: key);
 
@@ -101,8 +106,7 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
                   controller: _controller,
                   layers: widget.layers,
                   oldLayers: oldLayers,
-                  onUpdateTouchableShapes: (shapes) =>
-                      _touchableShapes = shapes,
+                  onUpdateTouchableShapes: (shapes) => _touchableShapes = shapes,
                   padding: widget.padding,
                   touchedData: _touchedData,
                 ),
