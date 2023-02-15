@@ -74,6 +74,8 @@ class _ChartState extends State<Chart> with TickerProviderStateMixin {
   @override
   void dispose() {
     _controller.dispose();
+    widget.layers.forEach((e) => e.dispose());
+    _disposeOldLayers();
     super.dispose();
   }
 
