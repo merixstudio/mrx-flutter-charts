@@ -3,6 +3,8 @@ part of 'chart_animation.dart';
 /// Provides text style animation values.
 class ChartTextStyleAnimation implements ChartAnimation {
   Animation<TextStyle>? _animation;
+  CurvedAnimation? _listener;
+
   TextStyle _lastTextStyle = const TextStyle(
     color: Colors.transparent,
   );
@@ -26,6 +28,7 @@ class ChartTextStyleAnimation implements ChartAnimation {
   @override
   void dispose() {
     _animation = null;
+    _listener?.dispose();
   }
 
   /// Initialize animation.
@@ -36,19 +39,18 @@ class ChartTextStyleAnimation implements ChartAnimation {
     TextStyle? initialTextSyle,
     ChartTextStyleAnimation? oldAnimation,
   }) {
-    final Animation<TextStyle> animation = TextStyleTween(
+    _listener?.dispose();
+    _listener = CurvedAnimation(
+      parent: controller,
+      curve: curve,
+    );
+    _animation = TextStyleTween(
       begin: oldAnimation?._lastTextStyle ??
           initialTextSyle ??
           const TextStyle(
             color: Colors.transparent,
           ),
       end: textStyle,
-    ).animate(
-      CurvedAnimation(
-        parent: controller,
-        curve: curve,
-      ),
-    );
-    _animation = animation;
+    ).animate(_listener!);
   }
 }

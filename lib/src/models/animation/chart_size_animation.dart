@@ -3,6 +3,7 @@ part of 'chart_animation.dart';
 /// Provides size animation values.
 class ChartSizeAnimation implements ChartAnimation {
   Animation<Size>? _animation;
+  CurvedAnimation? _listener;
   Size _lastSize = Size.zero;
 
   ChartSizeAnimation();
@@ -21,6 +22,7 @@ class ChartSizeAnimation implements ChartAnimation {
   @override
   void dispose() {
     _animation = null;
+    _listener?.dispose();
   }
 
   /// Initialize animation.
@@ -31,15 +33,14 @@ class ChartSizeAnimation implements ChartAnimation {
     Size? initialSize,
     ChartSizeAnimation? oldAnimation,
   }) {
-    final Animation<Size> animation = Tween<Size>(
+    _listener?.dispose();
+    _listener = CurvedAnimation(
+      parent: controller,
+      curve: curve,
+    );
+    _animation = Tween<Size>(
       begin: oldAnimation?._lastSize ?? initialSize ?? size,
       end: size,
-    ).animate(
-      CurvedAnimation(
-        parent: controller,
-        curve: curve,
-      ),
-    );
-    _animation = animation;
+    ).animate(_listener!);
   }
 }
