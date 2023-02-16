@@ -3,6 +3,7 @@ part of 'chart_animation.dart';
 /// Provides position animation values.
 class ChartPositionAnimation implements ChartAnimation {
   Animation<Offset>? _animation;
+  CurvedAnimation? _listener;
   Offset _lastPosition = Offset.zero;
 
   ChartPositionAnimation();
@@ -21,6 +22,7 @@ class ChartPositionAnimation implements ChartAnimation {
   @override
   void dispose() {
     _animation = null;
+    _listener?.dispose();
   }
 
   /// Initialize animation.
@@ -31,15 +33,14 @@ class ChartPositionAnimation implements ChartAnimation {
     Offset? initialPosition,
     ChartPositionAnimation? oldAnimation,
   }) {
-    final Animation<Offset> animation = Tween<Offset>(
+    _listener?.dispose();
+    _listener = CurvedAnimation(
+      parent: controller,
+      curve: curve,
+    );
+    _animation = Tween<Offset>(
       begin: oldAnimation?._lastPosition ?? initialPosition ?? position,
       end: position,
-    ).animate(
-      CurvedAnimation(
-        parent: controller,
-        curve: curve,
-      ),
-    );
-    _animation = animation;
+    ).animate(_listener!);
   }
 }

@@ -3,6 +3,8 @@ part of 'chart_animation.dart';
 /// Provides color animation values.
 class ChartColorAnimation implements ChartAnimation {
   Animation<Color?>? _animation;
+  CurvedAnimation? _listener;
+
   Color _lastColor = Colors.transparent;
 
   ChartColorAnimation();
@@ -21,6 +23,7 @@ class ChartColorAnimation implements ChartAnimation {
   @override
   void dispose() {
     _animation = null;
+    _listener?.dispose();
   }
 
   /// Initialize animation.
@@ -31,15 +34,14 @@ class ChartColorAnimation implements ChartAnimation {
     Color? initialColor,
     ChartColorAnimation? oldAnimation,
   }) {
-    final Animation<Color?> animation = ColorTween(
+    _listener?.dispose();
+    _listener = CurvedAnimation(
+      parent: controller,
+      curve: curve,
+    );
+    _animation = ColorTween(
       begin: oldAnimation?._lastColor ?? initialColor ?? Colors.transparent,
       end: color,
-    ).animate(
-      CurvedAnimation(
-        parent: controller,
-        curve: curve,
-      ),
-    );
-    _animation = animation;
+    ).animate(_listener!);
   }
 }

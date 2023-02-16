@@ -61,6 +61,7 @@ class ChartLineDataItem extends ChartDataItem {
   @override
   void dispose() {
     _value.dispose();
+    _touch.dispose();
   }
 
   /// Initialize touch area animations.
